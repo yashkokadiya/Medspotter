@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="confirmation.css">
+</head>
+<body>
+  <h1>Order Confirmation</h1>
+  <div id="orderDetails"></div>
+
+  <script>
+    // Simulate orderDetails (replace with actual data from your backend or logic)
+    const orderDetails = JSON.parse(localStorage.getItem("orderDetails"));
+
+    if (orderDetails) {
+      // Fetch existing orders or initialize an empty array
+      const existingOrders = JSON.parse(localStorage.getItem("allOrderDetails")) || [];
+
+      // Build a new order object
+      const newOrder = {
+        orderId: orderDetails.orderId || `MS-${Math.floor(Math.random() * 1000000).toString().padStart(6, '0')}`,
+        orderDateTime: new Date().toLocaleString(),
+        customer: {
+          name: orderDetails.customer.name,
+          phone: orderDetails.customer.phone,
+          address: orderDetails.customer.address,
+          paymentMode: orderDetails.customer.paymentMode,
+          storeCode: orderDetails.customer.storeCode
+        },
+        cart: orderDetails.cart,
+        total: orderDetails.total
+      };
+
+      // Add the new order to the existing array
+      existingOrders.push(newOrder);
+
+      // Save the updated orders array to localStorage
+      localStorage.setItem("allOrderDetails", JSON.stringify(existingOrders));
+
+      // Clear the cart after saving
+      localStorage.removeItem("cart");
+
+      // Display order details
+      const orderDetailsContainer = document.getElementById("orderDetails");
+      orderDetailsContainer.innerHTML = `
+        <h2>Order ID: ${newOrder.orderId}</h2>
+        <p><strong>Order Date & Time:</strong> ${newOrder.orderDateTime}</p>
+        <h3>Customer Information:</h3>
+        <p><strong>Name:</strong> ${newOrder.customer.name}</p>
+        <p><strong>Phone:</strong> ${newOrder.customer.phone}</p>
+        <p><strong>Address:</strong> ${newOrder.customer.address}</p>
+        <p><strong>Payment Mode:</strong> ${newOrder.customer.paymentMode}</p>
+        <h3>Products:</h3>
+        ${newOrder.cart
+          .map(item => `
+            <div>
+              <p><strong>Product:</strong> ${item.name}</p>
+              <p><strong>Quantity:</strong> ${item.quantity}</p>
+              <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+            </div>
+          `).join("")}
+        <h3>Summary:</h3>
+        <p><strong>Total:</strong> $${newOrder.total.toFixed(2)}</p>
+      `;
+    } else {
+      document.getElementById("orderDetails").innerHTML = "<p>No order details found.</p>";
+    }
+  </script>
+</body>
+</html>
