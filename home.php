@@ -141,9 +141,11 @@ $products = fetchProducts($conn, $searchQuery);
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <img src="C:\Users\yashk\medspotter\logo1.jpg" alt="Logo">
-        </div>
+      <div class="logo">
+            <a href="home.php">
+            <img src="logo1.jpg" alt="Logo">
+            </a>
+          </div>
         <div class="search-container">
             <form method="GET" action="">
                 <input type="text" name="search" placeholder="Search..." class="search-input" value="<?= htmlspecialchars($searchQuery) ?>">
