@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Stock Update Page</title>
+  <link rel="stylesheet" href="adminstup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="adminprup.html">
+      <img src="logo1.jpg" alt="Logo">
+      </a>
+    </div>
+    <nav class="nav">
+        <ul>
+          <li><a href="adminprup.html">Product Updation</a></li>
+          <li><a href="adminstup.html">Stock Updation </a></li>
+          <li><a href="admincon.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="product">
+<div class="container">
+    <h1>Admin Stock Update</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Example Product</td>
+          <td>100</td>
+          <td>$10</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <form id="stockForm">
+      <h2>Add / Update Stock</h2>
+      <label for="productId">Product ID:</label>
+      <input type="text" id="productId" name="productId" required>
+
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" step="0.01" required>
+
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>  
+</body>
+</html>
