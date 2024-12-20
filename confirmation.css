@@ -1,0 +1,100 @@
+/* General Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #444;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+p {
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+strong {
+  color: #111;
+}
+
+/* Container */
+#orderDetails {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Item Styles */
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.order-item p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Summary Section */
+.summary p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.summary p strong {
+  color: #555;
+}
+
+/* Delivery Info */
+.delivery-info {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px dashed #ccc;
+  font-style: italic;
+  color: #555;
+  font-size: 1.2em;
+}
+
+/* Button Styles */
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
