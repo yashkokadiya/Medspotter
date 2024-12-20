@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Products</title>
+  <link rel="stylesheet" href="adminprup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="adminprup.html">
+      <img src="logo1.jpg" alt="Logo">
+      </a>
+    </div>
+    <nav class="nav">
+        <ul>
+          <li><a href="adminprup.html">Product Updation</a></li>
+          <li><a href="adminstup.html">Stock Updation </a></li>
+          <li><a href="notification.html">Notification</a></li>
+          <li><a href="admincon.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="products">
+<div class="admin-container">
+      <h1>Admin Panel - Add Product</h1>
+      
+     <form action="adminprup.php" method="POST" enctype="multipart/form-data">
+    <label for="storeid">Store ID:</label>
+    <input type="number" id="storeid" name="storeid" required><br><br>
+    
+    <label for="productname">Product Name:</label>
+    <input type="text" id="productname" name="productname" required><br><br>
+    
+    <label for="productdescription">Description:</label>
+    <textarea id="productdescription" name="productdescription" required></textarea><br><br>
+    
+    <label for="productprice">Price:</label>
+    <input type="number" id="productprice" name="productprice" step="0.01" required><br><br>
+    
+    <label for="productImage">Image:</label>
+    <input type="file" id="productImage" name="productImage" required><br><br>
+    
+    <button type="submit">Add Product</button>
+</form>
+
+    </div>  
+  </div>
+
+  <script src="adminprup.js"></script>
+</body>
+</html>
