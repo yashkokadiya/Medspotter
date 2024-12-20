@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #444;
+    text-align: center;
+  }
+  
+  #orderNotifications {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-notification {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .order-notification:last-child {
+    border-bottom: none;
+  }
+  
+  .order-id, .product-name, .customer-name, .payment-mode {
+    margin: 5px 0;
+  }
+  
+  strong {
+    color: #111;
+  }
+  
