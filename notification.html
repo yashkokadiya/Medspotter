@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Notifications</title>
+  <link rel="stylesheet" href="notification.css">
+  <style>
+    .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #2fad69;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    flex: 1;
+}
+
+.search-btn {
+    background-color: #ddd;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #007BFF;
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="adminprup.html">
+      <img src="logo1.jpg" alt="Logo">
+      </a>
+    </div>
+    <nav class="nav">
+        <ul>
+          <li><a href="adminprup.html">Product Updation</a></li>
+          <li><a href="adminstup.html">Stock Updation </a></li>
+          <li><a href="notification.html">Notification</a></li>
+          <li><a href="admincon.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+  <h1>Order Notifications</h1>
+  <div id="orderNotifications"></div>
+  <script src="notification.js"></script>
+</body>
+</html>
